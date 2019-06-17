@@ -5,7 +5,7 @@
 
 Gregory <- read.csv("~/Downloads/Gregory.csv")
 library(readxl)
-New_Pyrite <- read_excel("Downloads/Appendix 1 data used in Random Forest analysis.xlsx",)
+New_Pyrite <- read_excel("~/Downloads/Appendix 1 data used in Random Forest analysis.xlsx")
 #Pyrite_WithTexture <- read_excel("Downloads/Sed py thesis data.xlsx",sheet = 15)
 #Pyrite_WithTexture_Sub <- Pyrite_WithTexture[,-c(16,18,2:7,9:14)]
 #Pyrite_WithTexture_Sub$`Pyrite type` <- as.factor(Pyrite_WithTexture_Sub$`Pyrite type`)
@@ -30,14 +30,14 @@ library(cluster)
 library(compiler)
 #f<-function(Gregory)
 #{
-  gower_dist <- daisy(Gregory[,-c(1:2)],
-                      metric = "gower",
-                      type = list())
-  
+gower_dist <- daisy(Gregory[,-c(1:2)],
+                    metric = "gower",
+                    type = list())
+
 #  gower_dist <- daisy(Greg_scale,
 #                      metric = "gower",
 #                      type = list())
-  #return(gower_dist)
+#return(gower_dist)
 #}
 
 #fc <- cmpfun(f)
